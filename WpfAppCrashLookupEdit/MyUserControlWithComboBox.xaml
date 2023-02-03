@@ -1,0 +1,21 @@
+﻿<UserControl 
+             x:Class="WpfAppCrashLookupEdit.MyUserControlWithComboBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfAppCrashLookupEdit" 
+             mc:Ignorable="d" 
+             MinWidth="100"
+             x:Name="MyUserControlName"
+             d:Background="White"
+             d:DesignHeight="30" d:DesignWidth="300">
+    <Grid>
+        <ComboBox ItemsSource="{Binding ElementName=MyUserControlName,Path=Accounts}" 
+                  SelectedValue="{Binding ElementName=MyUserControlName,Path=Account}"
+                  SelectedValuePath="Number"
+                  DisplayMemberPath="Number"
+                  ></ComboBox>
+       
+    </Grid>
+</UserControl>

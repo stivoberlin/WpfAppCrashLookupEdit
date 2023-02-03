@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfAppCrashLookupEdit.TestView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppCrashLookupEdit" 
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=local:TestViewModelDesignTime,IsDesignTimeCreatable=True}"
+        Title="TestView" Height="450" Width="800">
+    <Grid>
+        <ListBox ItemsSource="{Binding Details}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <local:MyUserControlWithLookupEdit Account="{Binding Account}"
+                                             Accounts="{Binding Accounts}"></local:MyUserControlWithLookupEdit>
+                    <!--<local:MyUserControlWithComboBox Account="{Binding Account}"
+                                             Accounts="{Binding Accounts}"></local:MyUserControlWithComboBox>-->
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>
